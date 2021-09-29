@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 import frc.robot.commands.DriveJoystick;
 import frc.robot.commands.DriveManual;
+import frc.robot.commands.groups.Autonomous;
 import frc.robot.helpers.ChasisControl;
 import frc.robot.subsystems.DriveTrain;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -28,11 +29,11 @@ public class RobotContainer {
      JoystickButton moveForwardButton = new JoystickButton(m_stick, Constants.Buttons.Chasis.forward);
      JoystickButton moveBackwardButton = new JoystickButton(m_stick, Constants.Buttons.Chasis.backward);
 
-     moveForwardButton.whenPressed(new DriveManual(m_driveTrain, new ChasisControl(0.5, 0, 800)));
-     moveBackwardButton.whenPressed(new DriveManual(m_driveTrain, new ChasisControl(-0.5, 0, 800)));
+     moveForwardButton.whenPressed(new DriveManual(m_driveTrain, new ChasisControl(0.5, 0, 0.8)));
+     moveBackwardButton.whenPressed(new DriveManual(m_driveTrain, new ChasisControl(-0.5, 0, 0.8)));
   }
 
   public Command getAutonomousCommand() {
-    return null;
+    return new Autonomous(m_driveTrain);
   }
 }

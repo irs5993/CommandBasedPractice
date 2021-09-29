@@ -24,6 +24,7 @@ public class DriveManual extends CommandBase {
 
   @Override
   public void initialize() {
+    m_timer.reset();
     m_timer.start();
   }
 
@@ -40,6 +41,6 @@ public class DriveManual extends CommandBase {
 
   @Override
   public boolean isFinished() {
-    return m_timer.get() * 1000 >= m_control.duration;
+    return m_timer.hasElapsed(m_control.duration);
   }
 }
