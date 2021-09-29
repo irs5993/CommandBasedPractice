@@ -30,7 +30,7 @@ public class DriveJoystick extends CommandBase {
   }
 
   public double map(double value, double old_min, double old_max, double new_min, double new_max) {
-    return value * (new_max - new_min) / old_max - old_min;
+    return (((value - old_min) * (new_max - new_min)) / (old_max - old_min)) + new_min;
   }
 
   @Override
