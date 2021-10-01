@@ -14,20 +14,20 @@ public final class Constants {
         }
 
         public static class Drum {
-            public static final int left = 9;
-            public static final int right = 8;
+            public static final int left = 7;
+            public static final int right = 6;
         }
     }
 
     public static class Buttons {
         public static class Chasis {
-            public static final int forward = 10;
-            public static final int backward = 11;
+            public static final int forward = 11;
+            public static final int backward = 12;
         }
 
         public static class Drum {
-            public static final int left = 8;
-            public static final int right = 9;
+            public static final int left = 9;
+            public static final int right = 10;
         }
     }
 }

@@ -5,6 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveTrain;
 
@@ -23,10 +24,10 @@ public class DriveJoystick extends CommandBase {
     double slider = m_stick.getRawAxis(0);
     double multiplier = map(slider, 0, 1, 0.3, 1);
 
-    double speed = m_stick.getY() * multiplier;
-    double rotation = m_stick.getZ() * multiplier;
+    double speed = m_stick.getY();
+    double rotation = m_stick.getZ();
 
-    m_driveTrain.arcadeDrive(speed, rotation);
+    m_driveTrain.arcadeDrive(-speed, rotation);
   }
 
   public double map(double value, double old_min, double old_max, double new_min, double new_max) {

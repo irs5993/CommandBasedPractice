@@ -16,13 +16,13 @@ public class Autonomous extends SequentialCommandGroup {
   public Autonomous(DriveTrain driveTrain) {
     m_driveTrain = driveTrain;
     addCommands(
-      new DriveManual(m_driveTrain, new ChasisControl(0.5, 0, 0.5)),
-      new DriveManual(m_driveTrain, new ChasisControl(-0.5, 0, 0.5)),
-      new DriveManual(m_driveTrain, new ChasisControl(0.5, 0, 0.5)),
+      new DriveManual(m_driveTrain, new ChasisControl(0.6, 0, 0.9)),
+      new DriveManual(m_driveTrain, new ChasisControl(-0.6, 0, 0.9)),
+      new DriveManual(m_driveTrain, new ChasisControl(0.6, 0, 0.9)),
       new WaitCommand(1),
-      new DriveManual(m_driveTrain, new ChasisControl(0, 0.5, 0.5)),
+      new DriveManual(m_driveTrain, new ChasisControl(0, 0.7, 0.9)),
       new WaitCommand(1),
-      new DriveManual(m_driveTrain, new ChasisControl(0, -0.5, 0.5))
+      new DriveManual(m_driveTrain, new ChasisControl(0, -0.7, 0.9))
 
     );
   }
