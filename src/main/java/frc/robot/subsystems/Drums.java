@@ -24,11 +24,11 @@ public class Drums extends SubsystemBase {
   }
 
   public void hitLeft() {
-    m_leftDrum.set(0.8);
+    m_leftDrum.set(1);
   }
 
   public void hitRight() {
-    m_rightDrum.set(0.8);
+    m_rightDrum.set(1);
   }
 
   public void stopRight() {

@@ -37,6 +37,6 @@ public class HitRight extends CommandBase {
 
   @Override
   public boolean isFinished() {
-    return m_timer.hasElapsed(0.2);
+    return m_timer.hasElapsed(0.05);
   }
 }

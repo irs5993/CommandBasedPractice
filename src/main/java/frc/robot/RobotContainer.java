@@ -52,8 +52,7 @@ public class RobotContainer {
   // Available commands -> HitLeft(m_drums), HitRight(m_drums), HitBoth(m_drums)
   public Command getAutonomousCommand() {
     return new ParallelCommandGroup(
-      new Beat(m_drums),
-      new DriveManual(m_driveTrain, new ChasisControl(0.5, 0, 8))
+      new Beat(m_drums)
    
     );
   }
